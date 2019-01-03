@@ -1,8 +1,8 @@
 set -ex
 
 wget https://neuron.yale.edu/ftp/neuron/versions/v7.6/7.6.2/nrn-7.6.2.x86_64-linux-py-36-35-27.deb
-su -
+apt update
 apt install ./nrn-7.6.2.x86_64-linux-py-36-35-27.deb
 rm nrn-7.6.2.x86_64-linux-py-36-35-27.deb
 
-echo 'export PYTHONPATH="/usr/local/nrn/lib/python/:$PYTHONPATH"' >> /etc/environment
+export PYTHONPATH="/usr/local/nrn/lib/python/:$PYTHONPATH"
