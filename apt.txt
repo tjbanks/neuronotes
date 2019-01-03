@@ -1,0 +1,5 @@
+libreadline-dev
+libncurses-dev
+libtool
+make
+git

@@ -1,0 +1,5 @@
+numpy==1.13.1
+matplotlib==2.0.2 
+seaborn==0.8.1
+neuron==7.2.536.16
+git+git://github.com/AllenInstitute/bmtk#egg=bmtk
