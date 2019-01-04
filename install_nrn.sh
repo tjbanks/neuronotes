@@ -1,3 +1,5 @@
+alias python=python3
+
 cd $INSTALL_DIR
 touch nrnenv
 
