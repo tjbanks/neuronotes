@@ -34,7 +34,6 @@ RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
 ENV PATH ${NRN_DIR}/nrn-7.5/x86_64/bin:${PATH}
-ENG PYTHONPATH 
 
 RUN python setup.py install --prefix=${HOME}
 ENV PYTHONPATH ${PYTHONPATH}:~/lib/python/site-packages
