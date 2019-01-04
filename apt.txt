@@ -3,3 +3,4 @@ libncurses-dev
 libtool
 make
 git
+neuron
