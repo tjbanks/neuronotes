@@ -13,7 +13,7 @@ RUN mkdir -p ${BUILD_DIR}
 RUN mkdir -p ${HOME_DIR}
 RUN mkdir -p ${WORK_DIR}
 
-RUN conda install -y numpy h5py lxml pandas matplotlib jsonschema scipy mpi4py cmake
+RUN conda install -y numpy h5py lxml pandas matplotlib jsonschema scipy
 
 # Install NEURON for BioNet
 RUN conda install -y -c kaeldai neuron
