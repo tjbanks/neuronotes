@@ -26,4 +26,4 @@ make
 make install
 
 cd src/nrnpython
-python setup.py install
+python3 setup.py install
