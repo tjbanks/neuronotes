@@ -19,7 +19,7 @@ RUN apt install -y sudo
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
 USER root
+RUN pip install -r requirements.txt
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
-RUN sudo -H ${HOME} pip install -r requirements.txt
