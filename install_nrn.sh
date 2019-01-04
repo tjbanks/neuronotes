@@ -1,5 +1,3 @@
-alias python=python3
-
 cd $INSTALL_DIR
 touch nrnenv
 
@@ -11,7 +9,7 @@ mv nrn-7.5 nrn
 
 #Install neuron
 cd nrn
-./configure --prefix=`pwd` --with-nrnpython
+./configure --prefix=`pwd` --with-nrnpython=/usr/bin/python3
 make
 make install
 
