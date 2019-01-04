@@ -5,7 +5,7 @@ RUN apt-get install dialog apt-utils -y
 RUN apt-get install -y python3 python3-dev python3-pip python3-virtualenv
 
 RUN pip3 install --no-cache-dir notebook==5.*
-RUN apt install -y libreadline-dev libncurses-dev libtool make git neuron python3-neuron
+RUN apt install -y libreadline-dev libncurses-dev libtool make git
 
 ENV NB_USER jovyan
 ENV NB_UID 1000
@@ -27,8 +27,8 @@ COPY install_nrn.sh ${APP}
 COPY requirements.txt ${APP}
 WORKDIR ${APP}
 
-RUN chmod +x install_nrn.sh && install_nrn.sh
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN chmod +x install_nrn.sh && ${APP}/install_nrn.sh
+RUN pip3 install --no-cache-dir -r ${APP}/requirements.txt
 
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
