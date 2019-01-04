@@ -9,7 +9,7 @@ mv nrn-7.5 nrn
 
 #Install neuron
 cd nrn
-./configure --prefix=`pwd` --with-nrnpython=/usr/bin/python3
+./configure --prefix=`pwd` --with-nrnpython
 make
 make install
 

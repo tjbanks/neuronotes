@@ -19,6 +19,7 @@ RUN adduser --disabled-password \
     --uid ${NB_UID} \
     ${NB_USER}
 RUN apt install -y wget
+apt-get install -y python python-dev python-pip python-virtualenv
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
 USER root
@@ -34,6 +35,4 @@ RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
 ENV PATH ${NRN_DIR}/nrn-7.5/x86_64/bin:${PATH}
-
-RUN python3 setup.py install --prefix=${HOME}
 ENV PYTHONPATH ${PYTHONPATH}:~/lib/python/site-packages
