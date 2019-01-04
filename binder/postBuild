@@ -1,12 +1,9 @@
 #!/bin/bash
 set -ex
 
-echo "import pty; pty.spawn('/bin/bash')" > /tmp/asdf.py
-python /tmp/asdf.py
-su -
 wget https://neuron.yale.edu/ftp/neuron/versions/v7.6/7.6.2/nrn-7.6.2.x86_64-linux-py-36-35-27.deb
-sudo apt update
-sudo apt install ./nrn-7.6.2.x86_64-linux-py-36-35-27.deb
+apt update
+apt install ./nrn-7.6.2.x86_64-linux-py-36-35-27.deb
 rm nrn-7.6.2.x86_64-linux-py-36-35-27.deb
 
 export PYTHONPATH="/usr/local/nrn/lib/python/:$PYTHONPATH"
