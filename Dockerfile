@@ -1,11 +1,11 @@
-FROM ubuntu:18.04
+FROM continuumio/anaconda3:5.0.0
 
 RUN apt-get update
-RUN apt-get install dialog apt-utils -y
-RUN apt-get install -y python3 python3-dev python3-pip python3-virtualenv
+#RUN apt-get install dialog apt-utils -y
+# RUN apt-get install -y python3 python3-dev python3-pip python3-virtualenv
 
-RUN pip3 install --no-cache-dir notebook==5.*
-RUN apt install -y libreadline-dev libncurses-dev libtool make git
+RUN pip install --no-cache-dir notebook==5.*
+# RUN apt install -y libreadline-dev libncurses-dev libtool make git
 
 ENV NB_USER jovyan
 ENV NB_UID 1000
@@ -19,7 +19,7 @@ RUN adduser --disabled-password \
     --uid ${NB_UID} \
     ${NB_USER}
 RUN apt install -y wget
-RUN apt-get install -y python python-dev python-pip python-virtualenv
+# RUN apt-get install -y python python-dev python-pip python-virtualenv
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
 USER root
