@@ -18,7 +18,7 @@ RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
     ${NB_USER}
-RUN apt install -y sudo
+RUN apt install -y wget
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
 USER root

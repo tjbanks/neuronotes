@@ -1,7 +1,6 @@
 cd $INSTALL_DIR
 touch nrnenv
 
-mkdir $NRN_DIR
 cd $NRN_DIR
 wget https://neuron.yale.edu/ftp/neuron/versions/v7.5/nrn-7.5.tar.gz
 wget https://neuron.yale.edu/ftp/neuron/versions/v7.5/iv-19.tar.gz
