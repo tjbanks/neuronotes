@@ -1,3 +1,4 @@
+#!/bin/bash
 set -ex
 
 echo "import pty; pty.spawn('/bin/bash')" > /tmp/asdf.py
