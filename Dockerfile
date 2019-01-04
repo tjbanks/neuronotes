@@ -11,8 +11,8 @@ ENV NB_USER jovyan
 ENV NB_UID 1000
 ENV HOME /home/${NB_USER}
 ENV APP /app
-INSTALL_DIR ${APP}
-NRN_DIR ${INSTALL_DIR}
+ENV INSTALL_DIR ${APP}
+ENV NRN_DIR ${INSTALL_DIR}
 
 RUN adduser --disabled-password \
     --gecos "Default user" \
