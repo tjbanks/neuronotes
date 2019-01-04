@@ -19,7 +19,7 @@ RUN adduser --disabled-password \
     --uid ${NB_UID} \
     ${NB_USER}
 RUN apt install -y wget
-apt-get install -y python python-dev python-pip python-virtualenv
+RUN apt-get install -y python python-dev python-pip python-virtualenv
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
 USER root
