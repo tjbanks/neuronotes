@@ -19,7 +19,7 @@ RUN apt install -y sudo
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
 USER root
-RUN pip install -r requirements.txt
+RUN pip install numpy==1.13.1 matplotlib==2.0.2 seaborn==0.8.1 git+git://github.com/AllenInstitute/bmtk#egg=bmtk https://github.com/tjbanks/nrn/raw/master/NEURON-7.2.536.16.tar.gz
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
