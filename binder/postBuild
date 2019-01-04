@@ -1,3 +1,4 @@
 #!/bin/bash
 set -ex
 export PYTHONPATH="/usr/local/nrn/lib/python/:$PYTHONPATH"
+pip install neuron
