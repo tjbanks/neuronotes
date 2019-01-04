@@ -4,3 +4,4 @@ libtool
 make
 git
 neuron
+python3-neuron
