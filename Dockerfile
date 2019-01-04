@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 RUN apt-get update
 RUN apt-get install dialog apt-utils -y
-RUN apt-get install -y python python-dev python-pip python-virtualenv
+RUN apt-get install -y setfacl python python-dev python-pip python-virtualenv
 
 RUN pip install --no-cache-dir notebook==5.*
 RUN apt install -y libreadline-dev libncurses-dev libtool make git neuron python3-neuron
