@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
 
+RUN apt-get update
+RUN apt-get install acl -y
 
 ENV NB_USER jovyan
 ENV NB_UID 1000
