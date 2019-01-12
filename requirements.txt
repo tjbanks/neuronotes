@@ -1,5 +1,2 @@
-numpy==1.13.1
-matplotlib==2.0.2 
-seaborn==0.8.1
-git+git://github.com/AllenInstitute/bmtk#egg=bmtk
-https://github.com/tjbanks/nrn/raw/master/NEURON-7.2.536.16.tar.gz
+numpy
+scipy
